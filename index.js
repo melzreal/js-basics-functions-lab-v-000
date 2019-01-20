@@ -22,7 +22,7 @@ function calculatesFarePrice(start, destination){
     case (diTravel< 400):
       return 0;
       break;
-    case ((diTravel > 400 && < 2000)):
+    case ((diTravel > 400) && (diTravel< 2000)):
       return (diTravel - 400) * 0.02;
       break;
     case (diTravel===2000):
