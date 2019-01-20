@@ -19,7 +19,7 @@ function calculatesFarePrice(start, destination){
   let diTravel = distanceTravelledInFeet(start, destination);
 
   switch (diTravel) {
-    case (diTravel<= 400):
+    case (diTravel< 400):
       return 0;
       break;
     case ((diTravel > 400) && (diTravel< 2000)):
