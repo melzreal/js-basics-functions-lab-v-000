@@ -28,7 +28,7 @@ function calculatesFarePrice(start, destination){
     case diTravel>2000:
       return 25;
       break;
-    case diTravel> 2500:
+    case diTravel > 2500:
      return 'cannot travel that far';
     break;
   }
