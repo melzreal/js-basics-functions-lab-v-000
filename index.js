@@ -11,20 +11,26 @@ function distanceFromHqInFeet (someValue) {
 }
 
 function distanceTravelledInFeet(block1, block2) {
-    return -(distanceFromHqInFeet(block1) - distanceFromHqInFeet(block2))
+    return -(distanceFromHqInFeet(block1) - distanceFromHqInFeet(block2));
 }
 
 function calculatesFarePrice(start, destination){
 
   let diTravel = distanceTravelledInFeet(start, destination);
-
-  if (diTravel <= 400) {
-      return 0;
-  } else if (diTravel > 400 && diTravel <= 2000) {
-      return  (diTravel-400) * 0.02 ;
-  } else if (diTravel > 2000 && diTravel < 2500) {
-      return 25;
-  } else {
-      return 'cannot travel that far';
+  let reply;
+  switch (diTravel) {
+    case (diTravel<= 400):
+      reply = 0;
+      break;
+    case ((diTravel > 400) && (diTravel< 2000)):
+      reply = (diTravel - 400) * 0.02;
+      break;
+    case (diTravel===2000):
+        reply =  25;
+        break;
+    default:
+    reply =  'cannot travel that far';
+    return reply;
   }
+ 
 }
