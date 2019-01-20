@@ -17,20 +17,20 @@ function distanceTravelledInFeet(block1, block2) {
 function calculatesFarePrice(start, destination){
 
   let diTravel = distanceTravelledInFeet(start, destination);
-  let reply;
+
   switch (diTravel) {
     case (diTravel<= 400):
-      reply = 0;
+      return 0;
       break;
     case ((diTravel > 400) && (diTravel< 2000)):
-      reply = (diTravel - 400) * 0.02;
+      return (diTravel - 400) * 0.02;
       break;
     case (diTravel===2000):
-        reply =  25;
+        return 25;
         break;
     default:
-    reply =  'cannot travel that far';
-    return reply;
+    return 'cannot travel that far';
+
   }
- 
+
 }
