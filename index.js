@@ -19,6 +19,9 @@ function calculatesFarePrice(start, destination){
   const diTravel = distanceTravelledInFeet(start, destination);
 
   switch (diTravel > 0) {
+    case diTravel > 2500:
+     return 'cannot travel that far';
+     break;
     case diTravel<= 400:
       return 0;
       break;
@@ -28,9 +31,6 @@ function calculatesFarePrice(start, destination){
     case diTravel>2000:
       return 25;
       break;
-    case diTravel > 2500:
-     return 'cannot travel that far';
-    break;
   }
 
 }
